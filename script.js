@@ -2,7 +2,11 @@
 
 // It is good practice to wait for the document to be fully loaded and ready before working with it. This also allows you to have your JavaScript code before the body of your document, in the head section.
 
+// adding my first onlcick handler..
 $(document).ready(function(){
     console.log("hello world...")
+    $('.btn').click(function(){
+        console.log("I got clicked.....")
+    })
 })
 
