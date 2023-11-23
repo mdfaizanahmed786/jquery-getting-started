@@ -32,33 +32,46 @@ $("#hover2").click(function () {
   $(this).css("background-color", "green");
 });
 
-
 // hide and show elements
-$("#hide-text").click(function(){
-    // .hide(speed, callback) some optional parameters...
-    $(".hide-text-now").hide(1000);
-})
+$("#hide-text").click(function () {
+  // .hide(speed, callback) some optional parameters...
+  $(".hide-text-now").hide(1000);
+});
 
-$('#show-text').click(function(){
-    // we can even toggle .toggle function helps us to do that...
-    $('.show-text-now').show();
-})
+$("#show-text").click(function () {
+  // we can even toggle .toggle function helps us to do that...
+  $(".show-text-now").show();
+});
 
 // the below syntax will hide all p elements
 // $("p").on("click", function(){
 //   $(this).hide();
 // });
 
+// we also have fadeIn as well..
+$(".fadeOutDemo").click(function () {
+  $("#div1").fadeOut();
+  $("#div2").fadeOut("slow");
+  $("#div3").fadeOut(3000);
+});
 
+// This below code will fade to some transparent or less opacity colors...
+//   $("button").click(function(){
+//     $("#div1").fadeTo("slow", 0.15);
+//     $("#div2").fadeTo("slow", 0.4);
+//     $("#div3").fadeTo("slow", 0.7);
+//   });
 
+// slideUp, slideDown, slideToggle
+// $("#flip").click(function(){
+//     $("#panel").slideUp();
+//   });
+$(selector).slideToggle(speed, callback);
 
+// The jQuery stop() method is used to stop an animation or effect before it is finished.
 
-
-
-
-
-
-
+// The stop() method works for all jQuery effect functions, including sliding, fading and custom animations.
+// $(selector).stop(stopAll,goToEnd);
 
 // there are many events as well..
 // 1. mousenter
