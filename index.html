@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
     <button class="btn">Hello world</button>
@@ -21,24 +22,37 @@
       <button id="show-text">Show text</button>
     </div>
 
-    <button class="fadeOutDemo"> Fadeout demo</button>
-      <div
-        id="div1"
-        style="width: 80px; height: 80px; background-color: red"
-      ></div>
-      <br />
-      <div
-        id="div2"
-        style="width: 80px; height: 80px; background-color: green"
-      ></div>
-      <br />
-      <div
-        id="div3"
-        style="width: 80px; height: 80px; background-color: blue"
-      ></div>
-   
+    <button class="fadeOutDemo">Fadeout demo</button>
+    <div
+      id="div1"
+      style="width: 80px; height: 80px; background-color: blueviolet"
+    ></div>
+    <br />
+    <div
+      id="div2"
+      style="width: 80px; height: 80px; background-color: green"
+    ></div>
+    <br />
+    <div
+      id="div3"
+      style="width: 80px; height: 80px; background-color: blue"
+    ></div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <button class="animate-btn">Animate</button>
+    <div
+      class="animate-div"
+      style="
+        background-color: aquamarine;
+        position: relative;
+        height:100vh;
+        width: 240px;
+        color: black;
+      "
+    >
+      animate div
+    </div>
+    <button style="position:fixed; bottom:40px; right:10px; " id="scrollUpButton">Scroll top</button>
+
     <script src="script.js"></script>
   </body>
 </html>

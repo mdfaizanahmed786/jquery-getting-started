@@ -66,12 +66,75 @@ $(".fadeOutDemo").click(function () {
 // $("#flip").click(function(){
 //     $("#panel").slideUp();
 //   });
-$(selector).slideToggle(speed, callback);
+$("selector").slideToggle("speed", "callback");
+
+
+
+
 
 // The jQuery stop() method is used to stop an animation or effect before it is finished.
 
 // The stop() method works for all jQuery effect functions, including sliding, fading and custom animations.
 // $(selector).stop(stopAll,goToEnd);
+
+
+
+
+
+// Importance of callback function:( it is optional)
+// $("button").click(function(){
+//     $("p").hide("slow", function(){
+//       alert("The paragraph is now hidden");
+//     });
+//   });
+
+
+// chaining is also possible:
+// $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+
+
+
+
+
+
+
+
+// Animate Now
+// Is it possible to manipulate ALL CSS properties with the animate() method?
+
+// Yes, almost! However, there is one important thing to remember: all property names must be camel-cased when used with the animate() method: You will need to write paddingLeft instead of padding-left, marginRight instead of margin-right, and so on.
+$('.animate-btn').click(function(){
+  $('.animate-div').animate({left:"250px"})
+})
+
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 100) {
+    $('#scrollUpButton').fadeIn();
+  } else {
+    $('#scrollUpButton').fadeOut();
+  }
+});
+
+// Scroll up when the button is clicked
+$('#scrollUpButton').click(function() {
+  $('html, body').animate({scrollTop: 0}, 800);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // there are many events as well..
 // 1. mousenter
