@@ -105,15 +105,56 @@ $("#scrollUpButton").click(function () {
 });
 
 $(".content-btn").click(function () {
+  // To set values we can add the arguments in it. for instance, .text("Adding this test.."), .html("<b> Hello world</b>")
   alert($(".get-content").text());
   alert($(".get-content").html());
   alert($(".get-content").attr("data-x"));
+  // below code will set attribute..
+  $(".get-content").attr({
+    href: "https://www.w3schools.com/jquery/",
+    title: "W3Schools jQuery Tutorial",
+  });
 });
 
 // The below code gives us value of input element...
 // $("#btn1").click(function(){
 //   alert("Value: " + $("#test").val());
 // });
+
+$("#add-content").click(addContent);
+$("#prepend-content").click(prependContent);
+
+function addContent() {
+  $("#add-prev-content").append("faizan");
+}
+//below ones helps to understand to add multiple tags...
+function appendText() {
+  var txt1 = "<p>Text.</p>"; // Create element with HTML
+  var txt2 = $("<p></p>").text("Text."); // Create with jQuery
+  var txt3 = document.createElement("p"); // Create with DOM
+  txt3.innerHTML = "Text.";
+  $("body").append(txt1, txt2, txt3); // Append the new elements
+}
+
+function prependContent() {
+  $("#add-prev-content").prepend("<h1>riyan</h1>");
+}
+
+// Below demonstrates adding element before and after....
+$("#btn1").click(function () {
+  $("img").before("<b>Before</b>");
+});
+
+$("#btn2").click(function () {
+  $("img").after("<i>After</i>");
+});
+
+$("button").click(function () {
+  // below callback function removes the
+  $("#div1").remove();
+  // below removes the elements having all elements that have this class...
+  $("p").remove(".test");
+});
 
 // there are many events as well..
 // 1. mousenter
