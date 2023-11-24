@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 // this will hide the p tag
 // $("#test") id selector
-// $(":button") selects all button elements even having input type="button."
+// $(":button") selects all button elements even ha ving input type="button."
 // $("a[target='_blank']")	Selects all <a> elements with a target attribute value equal to "_blank"
 $(".hide").click(function () {
   $("p").hide(); // will select all p elements
@@ -173,6 +173,10 @@ console.log($("div").find("span"));
 // returns all descendants of div...
 $("div").find("*");
 
+// This will check for all siblings, at same level of the tree
+// some parameter, can also be used like: siblings("p") to check for another level...
+$("h2").siblings().css({ color: "red", border: "2px solid red" });
+// we also have, ("h2").next(), nextAll(), nextUnitl("p") and same for previous as well..
 // there are many events as well..
 // 1. mousenter
 // 2. mouseleave
