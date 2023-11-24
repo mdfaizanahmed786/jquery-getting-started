@@ -176,6 +176,40 @@ $("div").find("*");
 // This will check for all siblings, at same level of the tree
 // some parameter, can also be used like: siblings("p") to check for another level...
 $("h2").siblings().css({ color: "red", border: "2px solid red" });
+
+$(".get-external-data").load(
+  "https://jsonplaceholder.typicode.com/todos/1",
+  function (responseTxt, statusTxt, xhr) {
+    if (statusTxt == "success") alert("External content loaded successfully!");
+    if (statusTxt == "error")
+      alert("Error: " + xhr.status + ": " + xhr.statusText);
+  }
+);
+
+// to get some externald data on button click:
+
+$("#fetch-data").click(function () {
+  $.get(
+    "https://jsonplaceholder.typicode.com/todos/1",
+    function (data, status) {
+      console.log("Data: " + JSON.stringify(data) + "\nStatus: " + status);
+    }
+  );
+});
+
+$("button2").click(function () {
+  $.post(
+    "demo_test_post.asp",
+    {
+      name: "Donald Duck",
+      city: "Duckburg",
+    },
+    function (data, status) {
+      alert("Data: " + data + "\nStatus: " + status);
+    }
+  );
+});
+
 // we also have, ("h2").next(), nextAll(), nextUnitl("p") and same for previous as well..
 // there are many events as well..
 // 1. mousenter
