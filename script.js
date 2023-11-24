@@ -156,6 +156,23 @@ $("button").click(function () {
   $("p").remove(".test");
 });
 
+// below allows us to add css..
+$("article").css({ "background-color": "yellow", "font-size": "200%" });
+
+// will go until we get our ancestor(till html...)
+console.log($("span").parents());
+// will select just above parent..
+console.log($("span").parent());
+
+// we can set limit as well till where can we go..
+console.log($("span").parentsUntil("div"));
+
+// Going till children..
+// The find() method returns descendant elements of the selected element, all the way down to the last descendant.
+console.log($("div").find("span"));
+// returns all descendants of div...
+$("div").find("*");
+
 // there are many events as well..
 // 1. mousenter
 // 2. mouseleave
